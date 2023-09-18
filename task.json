@@ -1,0 +1,14 @@
+[
+    {
+        "name": "Good morning",
+        "detail": "Buy me a coffee",
+        "done": false,
+        "due": "2023-11-01 14:10:00"
+    },
+    {
+        "name": "Afternoon",
+        "detail": "Buy me a beer",
+        "done": false,
+        "due": "2023-11-01 15:21:00"
+    }
+]

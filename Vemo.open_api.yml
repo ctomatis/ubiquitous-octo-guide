@@ -1,0 +1,111 @@
+openapi: 3.0.0
+info:
+  title: Vemo
+  version: 1.0.0
+servers:
+  - url: http://localhost:3000
+components:
+  securitySchemes:
+    apikeyAuth:
+      type: http
+      scheme: apikey
+security:
+  - apikeyAuth: []
+paths:
+  /tasks/:
+    get:
+      tags:
+        - default
+      summary: List tasks
+      parameters:
+        - name: Content-Type
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+    post:
+      tags:
+        - default
+      summary: Add a new task
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                name: A new task
+                detail: Create a new task
+                done: false
+                due: '2023-11-01 10:00:00'
+      parameters:
+        - name: Content-Type
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /tasks/1:
+    get:
+      tags:
+        - default
+      summary: Get a single task
+      parameters:
+        - name: Content-Type
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+    put:
+      tags:
+        - default
+      summary: Update a task
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                name: Update task 1
+                detail: Task 1 done
+                done: true
+                due: '2023-11-11 14:10:00'
+      parameters:
+        - name: Content-Type
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+    delete:
+      tags:
+        - default
+      summary: Delete a task
+      parameters:
+        - name: Content-Type
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}

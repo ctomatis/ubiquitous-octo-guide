@@ -1,0 +1,6 @@
+{
+    "mode": "debug",
+    "api_key": "vmo",
+    "content_type": "application/json",
+    "dt_format": "2006-01-02 15:04:05"
+}

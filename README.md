@@ -1,4 +1,4 @@
-# Congenial disco
+# Ubiquitous octo
 
 ### How to install and run?
 
